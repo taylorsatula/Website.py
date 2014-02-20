@@ -71,7 +71,7 @@ cat <<EOF >"$DIR/$foldername/index.html"
 <head>
 	<meta charset="utf-8">
 	<title>$foldername</title>
-	
+	<link rel="stylesheet" href="style.css" type="text/css">
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
