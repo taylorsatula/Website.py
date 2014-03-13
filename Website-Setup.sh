@@ -1,18 +1,20 @@
 #!/bin/bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+## DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+
 echo "Please enter folder name: "
 read foldername
 echo ""
 echo "=-=-=-=-=-=-=-=-=-=-=-=-="
-mkdir -p  "$DIR/$foldername"
+mkdir -p  "$HOME/Desktop/$foldername"
 echo "Folder Created"
 echo "Populating Folder"
-mkdir -p  "$DIR/$foldername/images"
+mkdir -p  "$HOME/Desktop/$foldername/images"
 echo "Images folder created"
-mkdir -p  "$DIR/$foldername/javascript"
+mkdir -p  "$HOME/Desktop/$foldername/javascript"
 echo "Javascript folder created"
 echo "Populating style.css with Reset CSS"
-cat <<EOF >"$DIR/$foldername/style.css"
+cat <<EOF >"$HOME/Desktop/$foldername/style.css"
 /* @group Reset */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -65,7 +67,7 @@ table {
 /* @end */
 EOF
 echo "Populating index.html with basic HTML5 page"
-cat <<EOF >"$DIR/$foldername/index.html"
+cat <<EOF >"$HOME/Desktop/$foldername/index.html"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,7 +83,7 @@ cat <<EOF >"$DIR/$foldername/index.html"
 </body>
 </html>
 EOF
-echo "Operation Compete"
+echo -e "\033[0;32mOperation Compete\033[00m"
 echo "=-=-=-=-=-=-=-=-=-=-=-=-="
 echo ""
-echo "Your new project resides at $DIR/$foldername/"
+echo "Your new project resides at $HOME/Desktop/$foldername/"
