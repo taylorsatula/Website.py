@@ -9,26 +9,52 @@ echo "Please enter folder name: "
 read foldername
 echo ""
 
+
+
 echo "Generating..."
-echo -ne '###                              (10%)\r'
-sleep 0.5
-echo -ne '######                           (20%)\r'
-sleep 0.5
-echo -ne '#########                        (30%)\r'
-sleep 0.5
-echo -ne '############                     (40%)\r'
-sleep 0.5
-echo -ne '###############                  (50%)\r'
-sleep 0.5
-echo -ne '##################               (60%)\r'
-sleep 0.5
-echo -ne '#####################            (70%)\r'
-sleep 0.5
-echo -ne '########################         (80%)\r'
-sleep 0.5
-echo -ne '###########################      (90%)\r'
-sleep 0.5
-echo -ne '##############################   (100%)\r'
+echo -ne '                                           (0%)\r'
+sleep 0.25
+echo -ne '##                                         (5%)\r'
+sleep 0.25
+echo -ne '####                                       (10%)\r'
+sleep 0.25
+echo -ne '######                                     (15%)\r'
+sleep 0.25
+echo -ne '########                                   (20%)\r'
+sleep 0.25
+echo -ne '##########                                 (25%)\r'
+sleep 0.25
+echo -ne '############                               (30%)\r'
+sleep 0.25
+echo -ne '##############                             (35%)\r'
+sleep 0.25
+echo -ne '################                           (40%)\r'
+sleep 0.25
+echo -ne '##################                         (45%)\r'
+sleep 0.25
+echo -ne '####################                       (50%)\r'
+sleep 0.25
+echo -ne '######################                     (55%)\r'
+sleep 0.25
+echo -ne '########################                   (60%)\r'
+sleep 0.25
+echo -ne '##########################                 (65%)\r'
+sleep 0.25
+echo -ne '############################               (70%)\r'
+sleep 0.25
+echo -ne '##############################             (75%)\r'
+sleep 0.25
+echo -ne '################################           (80%)\r'
+sleep 0.25
+echo -ne '##################################         (85%)\r'
+sleep 0.25
+echo -ne '####################################       (90%)\r'
+sleep 0.25
+echo -ne '######################################     (95%)\r'
+sleep 0.25
+echo -ne '########################################   (95%)\r'
+sleep 0.25
+echo -ne '########################################## (100%)\r'
 echo -ne '\n'
 
 echo "=-=-=-=-=-=-=-=-=-=-=-=-="
@@ -91,10 +117,10 @@ cat <<EOF >"$HOME/Desktop/$foldername/index.html"
 EOF
 
 
-sleep 0.5
+sleep 0.6
 
 
-echo -e "\033[0;32mOperation Compete\033[00m"
+echo -e "\033[0;32mOperation Compete!\033[00m"
 echo "=-=-=-=-=-=-=-=-=-=-=-=-="
 echo ""
 echo "Your new project resides at $HOME/Desktop/$foldername/"
