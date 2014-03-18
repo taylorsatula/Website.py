@@ -77,13 +77,14 @@ don't even know how to feel. Its so nice.
 
           main p { margin-bottom: 21px }
 
-            code { width: 300px;
-                   line-height: 50px;
-                   letter-spacing: 1px;
-                   background-color: #d8d8d8;
-                   padding: 10px;
-                   border-radius: 5px;
-                   font-family: monospace; }
+	.codeWrapper {
+				   display: inline-block;
+				   line-height: 25px;
+	               letter-spacing: 1px;
+	               background-color: #d8d8d8;
+	               padding: 10px;
+	               border-radius: 5px;
+	               font-family: monospace;}
 
           #about { float: right }
 
