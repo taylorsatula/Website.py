@@ -1,0 +1,117 @@
+@import "reset.css";
+
+@import "fonts.css";
+
+/*
+
+Usually I wouldn't suggest using @import but
+since the project is so small and it isn't
+going to be pounded with traffic I thought
+I'd let it be my guilty pleasure. 
+
+Also, its been so long since I had that mess
+that is a reset stylesheet out of my code I 
+don't even know how to feel. Its so nice.
+
+*/
+
+     ::selection { background-color: rgba(254, 255, 0, 0.5) }
+
+::-moz-selection { background-color: rgba(254, 255, 0, 0.5) }
+
+            html { background-color: #fcfcfc;
+                   color: #404040;
+                   font-family: 'Karla', sans-serif; }
+
+            body { background-color: #fff;
+                   margin-bottom: 76px;
+                   box-shadow: 0px 0px 3px #444; }
+                   
+               a { color: #636363;}
+
+              h1 { font-size: 72px;
+                   font-family: Helvetica;
+                   font-weight: bold;
+                   position: absolute;
+                   top: 300px;
+                   left: 50%;
+                   margin-top: -35px;
+                   margin-left: -461px;
+                   text-align: center;
+                   text-shadow: 0 0 2px #999; }
+
+          header { height: 600px;
+                   width: 100%;
+                   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAdCAMAAADiia4GAAAAJ1BMVEXb29vj4+Pm5ubk5OTd3d3g4ODc3Nzh4eHl5eXe3t7i4uLf3t7f399+XFm3AAABH0lEQVR42nXUCw6DIBAE0EEUFvT+5y3utJ3wM9FUebKAQ4Fw/I944kopt1/BH+eULpxRIEDcMkrk1XksyMbrggfvlzVyRc3eL2uEkduNm50QgC+rrecZpV0FUgM6CvLAk0qOR2htIy9W8NgC24PWNvHjqCnVSfPhih92ofQFrOCyY8V5f/ootUQnm2f+E3DBd0G15aqvke25Zmea955roYs+w8BZWBnwew5IKXjvyZmu9xQICioz9p7kniBOLS545NRdNf5wTt/k2sCNOf6uwAOOSmWt46YhcoY5dgFxJh7QxShiCMjE+xiR6/NPXFEQV7gmrs0qroBMXDESZ0A2XICc227LtQWda2g7rv8hVE18y7V0YFD05DbxFpSur1g+eZYPS/as5GIAAAAASUVORK5CYII=) #eaeaea; 
+                   /* THIS IS THE BACKGROUND.png */
+                   /* NOTE TO SELF: ProCSSor REALLY DOESN'T LIKE BASE64 */
+                   border-bottom: 50px solid;
+                   color: #fff;
+		  		   border-color: rgb(255, 255, 0);
+		  }
+
+          footer { width: 100%;
+                   height: 75px;
+                   background-color: #f6f6f6;
+                   text-align: center;
+                   font-size: 8px;
+                   letter-spacing: 1px;
+                   line-height: 75px;
+                   font-family: Fipps;
+                   text-transform: uppercase;
+                   background-image: url('images/geometry.png');
+                   position: fixed;
+                   bottom: 0;
+                   z-index: -99; }
+
+        footer a { color: inherit;
+                   text-decoration: inherit; }
+
+            main { width: 960px;
+                   margin-left: auto;
+                   margin-right: auto;
+                   margin-top: 50px;
+                   padding-bottom: 25px;
+                   line-height: 25px;
+                   text-align: justify; }
+
+          main p { margin-bottom: 21px }
+
+            code { width: 300px;
+                   line-height: 50px;
+                   letter-spacing: 1px;
+                   background-color: #d8d8d8;
+                   padding: 10px;
+                   border-radius: 5px;
+                   font-family: monospace; }
+
+          #about { float: right }
+
+        .tagline { font-size: 20px;
+                   display: block;
+                   text-align: left;
+                   margin-top: 0px;
+                   text-shadow: 0; }
+
+          .arrow { height: 50px;
+                   width: 43px;
+                   position: absolute;
+                   top: 530px;
+                   left: 50%;
+                   margin-left: -21px;
+                   font-size: 50px;
+                   text-shadow: 0 0 2px #999; }
+
+     .monospaced { font-family: monospace }
+
+      .floatleft { float: left }
+
+     .floatright { float: right }
+
+           .icon { font-size: 300px;
+                   margin-top: -15px;
+                   color: #d8d8d8;
+                   padding-right: 43px;
+                   padding-bottom: 6px; }
+                   
+                   
