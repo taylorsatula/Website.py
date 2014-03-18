@@ -2,7 +2,7 @@
 ## DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ## Yes, I realize there are a lot of sleeps in here. It doesn't look fancy if it takes a tenth of a second.
 ## If you want it to be instant just remove all the lines involving sleep and also the from "Generating" to "echo -ne '\n'"
-## Shhh.... don't tell anyone.
+## Shhh.... don't tell anyone.  
 
 
 echo "Please enter folder name: "
