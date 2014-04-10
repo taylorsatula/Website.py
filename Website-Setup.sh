@@ -131,11 +131,11 @@ echo "=-=-=-=-=-=-=-=-=-=-=-=-="
 echo ""
 echo "Your new project resides at $HOME/Desktop/$foldername/"
 echo ""
-echo ""
 echo "This script is still very young. Send bug reports to: @taylorsatula"
 
 sleep 0.5
 
 if [ -d "/Applications/Espresso.app" ]; then
+echo "Opening in Espresso..."
 open -a /Applications/Espresso.app "$HOME/Desktop/$foldername/"
 fi
