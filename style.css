@@ -1,118 +1,116 @@
-@import "reset.css";
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('fonts/minecraftia-webfont.eot');
+    src: url('fonts/minecraftia-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/minecraftia-webfont.woff') format('woff'),
+         url('fonts/minecraftia-webfont.ttf') format('truetype'),
+         url('fonts/minecraftia-webfont.svg#minecraftiaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-@import "fonts.css";
+}
 
-/*
+@font-face {
+    font-family: '04b';
+    src: url('fonts/04b-webfont.eot');
+    src: url('fonts/04b-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/04b-webfont.woff') format('woff'),
+         url('fonts/04b-webfont.ttf') format('truetype'),
+         url('fonts/04b-webfont.svg#04b30') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-Usually I wouldn't suggest using @import but
-since the project is so small and it isn't
-going to be pounded with traffic I thought
-I'd let it be my guilty pleasure. 
+}
 
-Also, its been so long since I had that mess
-that is a reset stylesheet out of my code I 
-don't even know how to feel. Its so nice.
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
 
-*/
+::-moz-selection {background-color: #00ff00;}
+::selection {background-color: #00ff00;}
 
-     ::selection { background-color: rgba(254, 255, 0, 0.5) }
+@-webkit-keyframes blink {
+  0%     { opacity: 0 } 50% { opacity: 0 }
+  50.01% { opacity: 1 } 100% { opacity: 1 }
+}
 
-::-moz-selection { background-color: rgba(254, 255, 0, 0.5) }
+@keyframes blink {
+  0%     { opacity: 0 } 50% { opacity: 0 }
+  50.01% { opacity: 1 } 100% { opacity: 1 }
+}
 
-            html { background-color: #fcfcfc;
-                   color: #404040;
-                   font-family: 'Karla', sans-serif; }
+body {
+	background-color: #000;
+	padding: 20px;
+	font-size: 8px;
+	color: #ececec;
+	font-smooth: never;
+	-webkit-font-smoothing : none;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: Minecraftia, Courier, mono;
+	overflow: hidden;
+}
 
-            body { background-color: #fff;
-                   margin-bottom: 76px;
-                   box-shadow: 0px 0px 3px #444; }
-                   
-               a { color: #636363;}
+h1 {
+	font-family: "04b", "Courier New", Courier, mono;
+	font-size: 48px;
+	margin-bottom: 20px;
+}
 
-              h1 { font-size: 72px;
-                   font-family: Helvetica;
-                   font-weight: bold;
-                   position: absolute;
-                   top: 300px;
-                   left: 50%;
-                   margin-top: -35px;
-                   margin-left: -461px;
-                   text-align: center;
-                   text-shadow: 0 0 2px #999; }
+main {
+	line-height: 1.5em;
+	font-weight: bold;
+	width: 570px;
+}
 
-          header { height: 600px;
-                   width: 100%;
-                   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAdCAMAAADiia4GAAAAJ1BMVEXb29vj4+Pm5ubk5OTd3d3g4ODc3Nzh4eHl5eXe3t7i4uLf3t7f399+XFm3AAABH0lEQVR42nXUCw6DIBAE0EEUFvT+5y3utJ3wM9FUebKAQ4Fw/I944kopt1/BH+eULpxRIEDcMkrk1XksyMbrggfvlzVyRc3eL2uEkduNm50QgC+rrecZpV0FUgM6CvLAk0qOR2htIy9W8NgC24PWNvHjqCnVSfPhih92ofQFrOCyY8V5f/ootUQnm2f+E3DBd0G15aqvke25Zmea955roYs+w8BZWBnwew5IKXjvyZmu9xQICioz9p7kniBOLS545NRdNf5wTt/k2sCNOf6uwAOOSmWt46YhcoY5dgFxJh7QxShiCMjE+xiR6/NPXFEQV7gmrs0qroBMXDESZ0A2XICc227LtQWda2g7rv8hVE18y7V0YFD05DbxFpSur1g+eZYPS/as5GIAAAAASUVORK5CYII=) #eaeaea; 
-                   /* THIS IS THE BACKGROUND.png */
-                   /* NOTE TO SELF: ProCSSor REALLY DOESN'T LIKE BASE64 */
-                   border-bottom: 50px solid;
-                   color: #fff;
-		  		   border-color: rgb(255, 255, 0);
-		  }
+p {
+	margin-bottom: 2em;
+}
 
-          footer { width: 100%;
-                   height: 75px;
-                   background-color: #f6f6f6;
-                   text-align: center;
-                   font-size: 8px;
-                   letter-spacing: 1px;
-                   line-height: 75px;
-                   font-family: Fipps;
-                   text-transform: uppercase;
-                   background-image: url('images/geometry.png');
-                   position: fixed;
-                   bottom: 0;
-                   z-index: -99; }
+a {
+	color: #d9d9d9;
+	text-decoration: none;
+	border-bottom: 1px dotted #999;
+}
 
-        footer a { color: inherit;
-                   text-decoration: inherit; }
+a:hover {
+	color: #00ff00;
+	border-bottom: 1px dotted #00ff00;
+}
 
-            main { width: 960px;
-                   margin-left: auto;
-                   margin-right: auto;
-                   margin-top: 50px;
-                   padding-bottom: 25px;
-                   line-height: 25px;
-                   text-align: justify; }
+blink {
+  -webkit-animation: blink 1s infinite linear alternate;
+  animation: blink 1s infinite linear alternate;
+  position: relative;
+  left: 3px;
+  font-size: 1.2em;
+  background-color: #ececec;
+  height: 9px;
+  width: 6px;
+  display: inline-block;
+  
+}
 
-          main p { margin-bottom: 21px }
+.author {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	text-align: right;
+	font-weight: bold;
+	color: #333;
+}
 
-	.codeWrapper {
-				   display: inline-block;
-				   line-height: 25px;
-	               letter-spacing: 1px;
-	               background-color: #d8d8d8;
-	               padding: 10px;
-	               border-radius: 5px;
-	               font-family: monospace;}
+.author a {
+	color: #333;
+	border-bottom: 0;
+}
 
-          #about { float: right }
+.author a:hover {
+	color: #00ff00;
+	border-bottom: 1px dotted #00ff00;
+}
 
-        .tagline { font-size: 20px;
-                   display: block;
-                   text-align: left;
-                   margin-top: 0px;
-                   text-shadow: 0; }
-
-          .arrow { height: 50px;
-                   width: 43px;
-                   position: absolute;
-                   top: 530px;
-                   left: 50%;
-                   margin-left: -21px;
-                   font-size: 50px;
-                   text-shadow: 0 0 2px #999; }
-
-     .monospaced { font-family: monospace }
-
-      .floatleft { float: left }
-
-     .floatright { float: right }
-
-           .icon { font-size: 300px;
-                   margin-top: -15px;
-                   color: #d8d8d8;
-                   padding-right: 43px;
-                   padding-bottom: 6px; }
-                   
-                   
+#konami {
+	display: none;
+	position: absolute;
+	top: 100px;
+	right: 100px;
+}
