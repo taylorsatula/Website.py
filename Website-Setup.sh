@@ -4,7 +4,7 @@
 ## If you want it to be instant just remove all the lines involving sleep and also the from "Generating" to "echo -ne '\n'"
 ## Shhh.... don't tell anyone.
 
-
+## CHECKUP - Script still works 7:23P\\06/02/2021
 echo "Please enter folder name: "
 read foldername
 echo ""
