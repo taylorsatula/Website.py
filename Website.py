@@ -4,10 +4,12 @@
 ## If you want it to be instant just remove all the lines involving 'time.sleep()' and 'print()'
 ## Shhh.... don't tell anyone.
 
-## CHECKUP - Script works 7:23P\\06/02/2021
+## CHECKUP - Script works 12:36A\\11/30/2021
+## MAKE SURE THAT A PYTHON VERSION AT/ABOVE 3.9 IS INSTALLED ON SYSTEM
 
 import time                                                     #import the concept of 'time' for sleeps
 import os                                                       #import 'os' for mkdir and chdir functions
+import shutil
 
 USER_DESKTOP = os.path.expanduser("~/Desktop/")                 #set Desktop w/ path expander (Windows 10 now accepts '\' and '/' equally)
 
@@ -29,6 +31,7 @@ def main():
     generate_directories()  #generates needed directories and chdir into it
     generate_reset()        #reset.css
     generate_style()        #style.css
+    generate_cssComb()      #csscomb.json
     generate_index()        #index.html
 
     time.sleep(0.5)
@@ -89,6 +92,12 @@ body {
     style_File.close()                                          #closefile style.css
     time.sleep(0.1)
     print("style.css generated")
+
+########################
+
+def generate_cssComb():						#copy CSScomb into the project directory
+    shutil.copyfile('/home/taylut/.diybash/resources/touchstoneCSScomb', 'csscomb.json')
+    print(f"csscomb.json generated")
 
 ########################
 
