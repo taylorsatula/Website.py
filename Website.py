@@ -9,14 +9,14 @@
 
 import time                                                     #import the concept of 'time' for sleeps
 import os                                                       #import 'os' for mkdir and chdir functions
-import shutil
+import shutil                                                   #import utilities that support file copying and removal
 
 USER_DESKTOP = os.path.expanduser("~/Desktop/")                 #set Desktop w/ path expander (Windows 10 now accepts '\' and '/' equally)
 
-SPECIAL_CHARACTERS = ("""!"#%&'()*+,/:;<=>?[/]^`{|}""")         #Windows disallowed characters as of 07/18/2021  (https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wcce/dea20bc9-e6a8-4117-9288-68e67cd8f833)
+SPECIAL_CHARACTERS = ("""!"#%&'()*+,/:;<=>?[/]^`{|}""")         #Disallowed characters as of 07/18/2021  (https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wcce/dea20bc9-e6a8-4117-9288-68e67cd8f833)
 foldername = input("Please enter a folder name: ")
 while any(c in SPECIAL_CHARACTERS for c in foldername):         #test the entered value against each individual disallowed character. If its clean, passthru.
-    foldername = input("The OS does /not/ like special characters, try again: ")
+    foldername = input("The OS does /not/ like special characters in the filename, try again: ")
 else:
     foldername = foldername #passthru
 
@@ -95,7 +95,7 @@ body {
 
 ########################
 
-def generate_cssComb():						#copy CSScomb into the project directory
+def generate_cssComb():						                    #copy CSScomb into the project directory
     shutil.copyfile('/home/taylut/.diybash/resources/touchstoneCSScomb', 'csscomb.json')
     print(f"csscomb.json generated")
 
@@ -107,25 +107,28 @@ def generate_index():
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>--"""+foldername+""" | Skeleton</title>
-	<link rel="stylesheet" href="style.css" type="text/css"/>
 
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+
+    <meta charset="utf-8">
+	<title>--"""+foldername+""" | skeleton</title>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+    <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no" name="viewport">
+    <link rel="icon" type="image/png" sizes="512x512" href="">
+    <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="">
+
+
 </head>
 <body>
 	<header>
-		HEADER CONTENT
+        HEADER CONTENT
 	</header>
 
 	<main>
-		BODY OF PAGE CONTENT
+        BODY OF PAGE CONTENT
 	</main>
 
 	<!-- ANALYTICS TRACKING CODE -->
-	<script src="" type="text/javascript"></script>
+	<!-- <script src="" type="text/javascript"></script> -->
 </body><!-- page skeleton generated using @taylorsatula's Website.py script | Grab a copy of it at https://taylorsatula.github.io/Website.py/ -->
 </html>
     """)
