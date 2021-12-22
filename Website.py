@@ -22,7 +22,7 @@ else:
 
 
 def main():
-    print("Generating...")
+    print("Generating...")  
     time.sleep(0.7)
     progressBar()
 
@@ -39,7 +39,7 @@ def main():
     print("\n=-=-=-=-=-=-=-=-=-=-=-=-=")
     print("  ! Operation Compete !")
     print("=-=-=-=-=-=-=-=-=-=-=-=-=\n")
-    print(f"Your new project resides at {USER_DESKTOP}${foldername}")
+    print(f"Your new project resides at {USER_DESKTOP}--{foldername}")
     print()
     time.sleep(5) #at least on Windows the cmd window self closes when the script has completed its tasks
                   # wait(5) lets the user look at the results before it disappears
@@ -108,7 +108,7 @@ def generate_index():
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>$"""+foldername+""" | Skeleton</title>
+	<title>--"""+foldername+""" | Skeleton</title>
 	<link rel="stylesheet" href="style.css" type="text/css"/>
 
 	<!--[if lt IE 9]>
@@ -131,16 +131,16 @@ def generate_index():
     """)
     index_File.close()                                          #closefile index.html
     time.sleep(0.1)
-    print(f"index.html generated in ${foldername} root")
+    print(f"index.html generated in --{foldername} root")
 
 ########################
 
 def generate_directories():
 
-    os.mkdir(USER_DESKTOP+'$'+foldername)                       #create project directory on desktop
-    print(f'${foldername} created on Desktop')                  # all created project directories have '$' appended onto them
+    os.mkdir(USER_DESKTOP+'--'+foldername)                       #create project directory on desktop
+    print(f'--{foldername} created on Desktop')                  # all created project directories have '--' appended onto them
 
-    os.chdir(USER_DESKTOP+'$'+foldername)                       #chdir into newly created directory no matter where Website.py is currently running from
+    os.chdir(USER_DESKTOP+'--'+foldername)                       #chdir into newly created directory no matter where Website.py is currently running from
     #print(os.getcwd()) #for development purposes to make
                         #sure I'm working in the right place
     time.sleep(0.1)
