@@ -82,12 +82,23 @@ def generate_reset():
 def generate_style():
     style_File = open('style.css', 'w')                         #openfile style.css
     style_File.write("""
-@import "reset.css";
-/* You might want to inline this before release to save a HTTP request */
+    @import "reset.css";
+    /* You might want to inline this before release to save a HTTP request */
 
-body {
+    body {
 
-}
+    }
+
+    /* CSS grid system
+        Visualized on html page so you can pick the ones you need
+    */
+    .wrapper { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; grid-auto-rows: minmax(100px, auto);}
+    .one {grid-column: 1 / 3; grid-row: 1;}
+    .two {grid-column: 2 / 4; grid-row: 1 / 3;}
+    .three {grid-column: 1; grid-row: 2 / 5;}
+    .four {grid-column: 3; grid-row: 3;}
+    .five {grid-column: 2; grid-row: 4;}
+    .six {grid-column: 3; grid-row: 4;}
     """)
     style_File.close()                                          #closefile style.css
     time.sleep(0.1)
@@ -116,19 +127,54 @@ def generate_index():
     <link rel="icon" type="image/png" sizes="512x512" href="">
     <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="">
 
+    <style>
+        .one, .two, .three, .four, .five, .six, nav {
+            box-sizing: border-box;
+            border: 2px dashed rgb(0, 0, 0);
+        }
 
+        div, header, footer {opacity: 0.9;} /* If you reduce opacity in the script below it cascades and eventually inner elements have 0.00 opacity */
+    </style>
 </head>
 <body>
 	<header>
-        HEADER CONTENT
+		<nav>
+            <h1>HEADER1</h1>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
 	</header>
 
 	<main>
-        BODY OF PAGE CONTENT
+        <!-- these are CSS grid boxes. reference code in style.css -->
+		<div class="wrapper">
+            <div class="one">One</div>
+            <div class="two">Two</div>
+            <div class="three">Three</div>
+            <div class="four">Four</div>
+            <div class="five">Five</div>
+            <div class="six">Six</div>
+        </div>
 	</main>
 
 	<!-- ANALYTICS TRACKING CODE -->
 	<!-- <script src="" type="text/javascript"></script> -->
+    
+    <!-- script below adds a random background color to every single element on the page -->
+    <!-- --       makes it easier to adjust box sizes when its an early project       -- -->
+    <script>
+        (function() {
+            var boxes = document.getElementsByTagName('*');
+            for (var c = 0; c < boxes.length; c++) {
+                var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+                boxes[c].style.backgroundColor = randomColor;
+            }
+        })();  
+    </script>
+
 </body><!-- page skeleton generated using @taylorsatula's Website.py script | Grab a copy of it at https://taylorsatula.github.io/Website.py/ -->
 </html>
     """)
