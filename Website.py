@@ -121,7 +121,7 @@ def generate_index():
 
 
     <meta charset="utf-8">
-	<title>--"""+foldername+""" | skeleton</title>
+	<title>&#128578; --"""+foldername+""" &#128579;</title>
 	<link rel="stylesheet" href="style.css" type="text/css"/>
     <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no" name="viewport">
     <link rel="icon" type="image/png" sizes="512x512" href="">
